@@ -1,1 +1,1 @@
-import "@testing-library/vitest-dom";
+import "@testing-library/jest-dom";
