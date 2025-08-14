@@ -1,23 +1,31 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true
-  },
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
+  parser: "@typescript-eslint/parser",
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module"
+    ecmaVersion: 2020,
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
   settings: {
     react: {
-      version: "detect"
-    }
+      version: "detect",
+    },
   },
-  plugins: ["react"],
+  plugins: ["@typescript-eslint", "react", "react-hooks"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
+  env: {
+    browser: true,
+    es2021: true,
+    jest: true,
+  },
   rules: {
-    "react/react-in-jsx-scope": "off"
-  }
+    // здесь можно добавить свои правила
+  },
+  ignorePatterns: ["node_modules", "dist"],
 };
