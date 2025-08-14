@@ -25,7 +25,7 @@ module.exports = {
     jest: true,
   },
   rules: {
-    // здесь можно добавить свои правила
+     "react/react-in-jsx-scope": "off",
   },
   ignorePatterns: ["node_modules", "dist"],
 };
