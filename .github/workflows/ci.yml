@@ -29,7 +29,7 @@ jobs:
         run: npx eslint . --ext .ts,.tsx,.js,.jsx
 
       - name: Run tests
-        run: npm test -- --ci --coverage
+        run: npx vitest run --coverage
 
       - name: Build app
         run: npm run build
